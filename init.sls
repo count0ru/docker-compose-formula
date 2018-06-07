@@ -75,7 +75,7 @@
         Name: "{{ compose_name }}"
         Address: "{{ service_ip }}"
         Port: {{ compose_data['consul_register_port'] }}
-        Tags: ["{{ env }}", "{{ project }}", "{{ servicetype }}", "{{ sla }}", "{{ owner }}"]
+        Tags: ["{{ compose_name }}"]
         Check: 
           Script: "systemctl status {{ compose_name }}"
           Interval: "30s"
